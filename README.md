@@ -1,7 +1,7 @@
 # MQTT-SERVER-MONITOR
-ESP32S3 TFT screen (or Lilygo/TTgo tdisplay-s3) server/computer status monitor. ESP32S3 tft屏幕的服务器 电脑状态监视仪。 
- 
+ESP32S3 TFT screen (or Lilygo/TTgo tdisplay-s3) server/computer status monitor. ESP32S3 tft屏幕的服务器 电脑状态监视仪。  
 Weather API/天气API接口申请地址：https://www.seniverse.com/ 
+ ![abdf48028a1f4c382ee45979797acbf](https://github.com/Lynnette177/MQTT-SERVER-MONITOR/assets/68948483/d1cf4526-312b-4c86-a39c-9651ddc24e39)
 申请免费版即可 
 # Usage
 ## Client
