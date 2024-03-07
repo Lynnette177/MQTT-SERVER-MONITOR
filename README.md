@@ -5,16 +5,16 @@ Weather API/天气API接口申请地址：https://www.seniverse.com/
 申请免费版即可 
 # Usage
 ## Client
-Using a esp32s3 with tft screen (better using lilygo T-displayS3). 
-Define your WIFI SSID/PASSWORD in bupt.h. Also your BUPT Account/Password if you need auto login BUPT-portal in school. 
-Define your Weather API key in weather.h. 
-Define your mqtt server/port/account/password/topic in mqtt.h. 
+Using a esp32s3 with tft screen (better using lilygo T-displayS3).  
+Define your WIFI SSID/PASSWORD in bupt.h. Also your BUPT Account/Password if you need auto login BUPT-portal in school.  
+Define your Weather API key in weather.h.  
+Define your mqtt server/port/account/password/topic in mqtt.h.  
 Flash and enjoy. 
 
 ## Server
-A simple python script. You can include this file in your other files, then start a thread with a while True loop,upload status every 2 seconds using time.sleep(2) 
-Don't forget to set mqtt server/account/password/port! 
-Then everything should work!
+A simple python script. You can include this file in your other files, then start a thread with a while True loop,upload status every 2 seconds using time.sleep(2)  
+Don't forget to set mqtt server/account/password/port!  
+Then everything should work!  
 
 ## Features 
 ### Display(String):
