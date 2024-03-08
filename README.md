@@ -10,6 +10,7 @@ Using a esp32s3 with tft screen (better using lilygo T-displayS3).
 Define your WIFI SSID/PASSWORD in bupt.h. Also your BUPT Account/Password if you need auto login BUPT-portal in school.  
 Define your Weather API key in weather.h.  
 Define your mqtt server/port/account/password/topic in mqtt.h.  
+Hold the bottom button (GPIO0) to turn off screen  
 Flash and enjoy. 
 
 ## Server
@@ -45,6 +46,7 @@ ESP32S3 tft屏幕的服务器 电脑状态监视仪。推荐使用lilygo T-displ
 在bupt.h中定义wifi名称和密码，如果需要自动登录北邮校园网，也要写好你的学号密码。  
 在weather.h中定义心知天气api密钥。在上面的网址申请，免费。  
 在mqtt.h中定义mqtt服务器、端口、账号、密码、订阅主题。  
+长按下方的按钮（GPIO0）可以关闭屏幕  
 刷进esp32就可以了。 
  
 ## 服务器
