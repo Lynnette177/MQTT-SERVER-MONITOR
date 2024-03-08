@@ -139,6 +139,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(PIN_POWER_ON, OUTPUT);
   digitalWrite(PIN_POWER_ON, HIGH);
+  pinMode(0, INPUT_PULLUP); //button pin
   tft.init();
   tft.setRotation(1);
   sprite.createSprite(320, 170);
@@ -173,10 +174,31 @@ void setup() {
 
 void loop() {
   float volt;
+  bool screen_on = true;
   unsigned int lastframe_time = millis();
   unsigned int volttime = millis();
   volt = (analogRead(4) * 2 * 3.3 * 1000) / 4096 / 1000.0;
+  unsigned int pressed_time = 0;
   while(1){
+    if (digitalRead(0) == LOW){
+      pressed_time= millis();
+      while(digitalRead(0) == LOW){
+        if (millis() - pressed_time > 500){
+          if (screen_on){
+            tft.writecommand(ST7789_SLPIN); //turn off lcd display
+            digitalWrite(38, LOW); //turn of lcd backlight
+            screen_on = !screen_on;
+          }
+          else{
+            tft.writecommand(ST7789_SLPOUT); //turn on display
+            digitalWrite(38, HIGH); //turn on lcd backlight
+            screen_on = !screen_on;
+          }
+          break;
+        }
+      }
+      while(digitalRead(0) == LOW){}
+    }
     if(!client.connected()){
       client.connect("ESP32Client", mqttUser, mqttPassword);
       client.subscribe(mqttTopic);
